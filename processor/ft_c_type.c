@@ -6,7 +6,7 @@
 /*   By: efumiko <efumiko@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 12:30:51 by efumiko           #+#    #+#             */
-/*   Updated: 2020/07/18 15:59:46 by efumiko          ###   ########.fr       */
+/*   Updated: 2020/07/18 17:37:33 by efumiko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ static int	ft_print_space(t_data *data)
 	int	count_spaces;
 
 	count_spaces = data->width > 0 ? data->width - 1 : 0;
-	ft_putchar_n(' ', count_spaces);
+	if (data->flag_zero == '0' && data->type == '%')
+		ft_putchar_n('0', count_spaces);
+	else
+		ft_putchar_n(' ', count_spaces);
 	return (count_spaces);
 }
 
