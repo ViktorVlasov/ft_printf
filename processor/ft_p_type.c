@@ -6,7 +6,7 @@
 /*   By: efumiko <efumiko@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 17:47:09 by efumiko           #+#    #+#             */
-/*   Updated: 2020/07/18 16:07:47 by efumiko          ###   ########.fr       */
+/*   Updated: 2020/07/19 09:42:06 by efumiko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 
 static void	get_len_uint_nbr(size_t nbr, int base, int *len)
 {
-	char	*buf;
-
-	buf = "0123456789ABCDEF";
 	if (nbr / base != 0)
 		get_len_uint_nbr(nbr / base, base, len);
 	(*len)++;
